@@ -1,4 +1,4 @@
-package example
+package obs
 
 import (
 	"github.com/beyondstorage/go-storage/v4/services"
