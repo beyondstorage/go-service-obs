@@ -10,3 +10,9 @@ type objectPageStatus struct {
 func (i *objectPageStatus) ContinuationToken() string {
 	return i.marker
 }
+
+type storagePageStatus struct{}
+
+func (i *storagePageStatus) ContinuationToken() string {
+	return ""
+}
