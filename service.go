@@ -52,10 +52,10 @@ func (s *Service) get(ctx context.Context, name string, opt pairServiceGet) (sto
 func (s *Service) list(ctx context.Context, opt pairServiceList) (sti *StoragerIterator, err error) {
 	input := &storagePageStatus{}
 
-	return NewStoragerIterator(ctx, s.nexStoragePage, input), nil
+	return NewStoragerIterator(ctx, s.nextStoragePage, input), nil
 }
 
-func (s *Service) nexStoragePage(ctx context.Context, page *StoragerPage) error {
+func (s *Service) nextStoragePage(ctx context.Context, page *StoragerPage) error {
 	input := &obs.ListBucketsInput{
 		QueryLocation: true,
 	}
